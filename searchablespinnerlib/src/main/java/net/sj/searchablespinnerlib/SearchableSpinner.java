@@ -166,6 +166,17 @@ public class SearchableSpinner extends android.support.v7.widget.AppCompatSpinne
     }
 
     @Override
+    public void setSelection(int position) {
+        if (position != NO_ITEM_SELECTED) {
+            if (!_isDirty) {
+                _isDirty = true;
+                setAdapter(_arrayAdapter);
+                super.setSelection(position);
+            }
+        }
+    }
+
+    @Override
     public Object getSelectedItem() {
         if (!TextUtils.isEmpty(_strHintText) && !_isDirty) {
             return null;
