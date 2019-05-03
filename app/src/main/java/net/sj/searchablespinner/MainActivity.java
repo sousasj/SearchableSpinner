@@ -19,12 +19,15 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("Exemplo");
-        arrayList.add("Exemplo");
+        arrayList.add("Exemplo kjheiuwq3yr");
         arrayList.add("Exemplo");
 
         ArrayAdapter spinnerArrayAdapter = new ArrayAdapter(this,
                 android.R.layout.simple_spinner_dropdown_item,
                 arrayList);
         sp.setAdapter(spinnerArrayAdapter);
+
+        sp.setSelection(1);
+
     }
 }
